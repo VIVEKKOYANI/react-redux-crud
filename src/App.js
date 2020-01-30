@@ -1,6 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Link,Match } from 'react-router-dom';
+import gamesPage from './gamesPage';
+
 
 function App() {
   return (
@@ -16,8 +19,10 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          <Link to="games">Games</Link>
         </a>
+
+        <Match pattern="/games" component={gamesPage} />
       </header>
     </div>
   );
